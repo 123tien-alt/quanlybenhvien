@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Bệnh Nhân</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1 class="system-title">Hệ Thống Quản Lý Bệnh Nhân</h1>
+    </header>
+
+    <nav>
+        <div class="menu-header" style="background-color: #333; ">
+            <div class="profile-container">
+                <img src="{% static 'myapp/images/profile.jpg' %}" alt="Trưởng Khoa Quang Tiến" class="profile-image">
+                <p class="role">Trưởng Khoa</p>
+                <p class="name">Quang Tiến</p>
+            </div>
+        </div>
+        <ul>
+            <li><a href="#benhnhan" class="nav-link">Bệnh Nhân</a></li>
+            <li><a href="#bacsivien" class="nav-link">Bác Sĩ</a></li>
+            <li><a href="#hoadon" class="nav-link">Hóa Đơn</a></li>
+            <li><a href="#donthuoc" class="nav-link">Đơn Thuốc</a></li>
+            <li><a href="#dichvu" class="nav-link">Dịch Vụ</a></li>
+            <li><a href="#loathuoc" class="nav-link">Loại Thuốc</a></li>
+            <li><a href="#lichhen" class="nav-link">Lịch Hẹn</a></li>
+            <li><a href="#hosobenhan" class="nav-link">Hồ Sơ Bệnh Án</a></li>
+        </ul>
+    </nav>
+
+    <!-- Bảng Bệnh Nhân -->
+    <section id="benhnhan benhnhan1">
+        <h2>Bệnh Nhân</h2>
+        <input type="text" id="search-benhan" onkeyup="searchTable('benhnhan')" placeholder="Tìm kiếm Bệnh Nhân">
+        <table id="benhnhan-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên Bệnh Nhân</th>
+                    <th>Tuổi</th>
+                    <th>Giới Tính</th>
+                    <th>Tình Trạng</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>30</td>
+                    <td>Nam</td>
+                    <td>Đang điều trị</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Trần Thị B</td>
+                    <td>45</td>
+                    <td>Nữ</td>
+                    <td>Khỏi bệnh</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Trần Thị B</td>
+                  <td>25</td>
+                  <td>Nữ</td>
+                  <td>Viêm phổi</td>
+              </tr>
+              <tr>
+                  <td>4</td>
+                  <td>Lê Văn C</td>
+                  <td>40</td>
+                  <td>Nam</td>
+                  <td>Tăng huyết áp</td>
+              </tr>
+              <tr>
+                  <td>5</td>
+                  <td>Phạm Thị D</td>
+                  <td>33</td>
+                  <td>Nữ</td>
+                  <td>Đái tháo đường</td>
+              </tr>
+              <tr>
+                  <td>6</td>
+                  <td>Ngô Văn E</td>
+                  <td>50</td>
+                  <td>Nam</td>
+                  <td>Gout</td>
+              </tr>
+              <tr>
+                  <td>7</td>
+                  <td>Đỗ Thị F</td>
+                  <td>28</td>
+                  <td>Nữ</td>
+                  <td>Thiếu máu</td>
+              </tr>
+              <tr>
+                  <td>8</td>
+                  <td>Hoàng Văn G</td>
+                  <td>36</td>
+                  <td>Nam</td>
+                  <td>Sỏi thận</td>
+              </tr>
+              <tr>
+                  <td>9</td>
+                  <td>Vũ Thị H</td>
+                  <td>45</td>
+                  <td>Nữ</td>
+                  <td>Viêm gan B</td>
+              </tr>
+              <tr>
+                  <td>10</td>
+                  <td>Trịnh Văn I</td>
+                  <td>60</td>
+                  <td>Nam</td>
+                  <td>Ung thư phổi</td>
+              </tr>
+              
+              
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Bảng Bác Sĩ -->
+    <section id="bacsivien">
+        <h2>Bác Sĩ</h2>
+        <input type="text" id="search-bacsivien" onkeyup="searchTable('bacsivien')" placeholder="Tìm kiếm Bác Sĩ">
+        <table id="bacsivien-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên Bác Sĩ</th>
+                    <th>Khoa</th>
+                    <th>Số Điện Thoại</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Dr. Nguyễn Minh</td>
+                    <td>Tim mạch</td>
+                    <td>0901234567</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Dr. Trần Lan</td>
+                    <td>Da liễu</td>
+                    <td>0987654321</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Dr. Trần Thị Lan</td>
+                  <td>Nội tiết</td>
+                  <td>0902345678</td>
+              </tr>
+              <tr>
+                  <td>4</td>
+                  <td>Dr. Lê Văn Hùng</td>
+                  <td>Tiêu hóa</td>
+                  <td>0913456789</td>
+              </tr>
+              <tr>
+                  <td>5</td>
+                  <td>Dr. Phạm Thị Mai</td>
+                  <td>Nhi khoa</td>
+                  <td>0924567890</td>
+              </tr>
+              <tr>
+                  <td>6</td>
+                  <td>Dr. Nguyễn Văn Quang</td>
+                  <td>Thần kinh</td>
+                  <td>0935678901</td>
+              </tr>
+              <tr>
+                  <td>7</td>
+                  <td>Dr. Vũ Thị Hạnh</td>
+                  <td>Sản phụ khoa</td>
+                  <td>0946789012</td>
+              </tr>
+              <tr>
+                  <td>8</td>
+                  <td>Dr. Bùi Minh Tuấn</td>
+                  <td>Chấn thương chỉnh hình</td>
+                  <td>0957890123</td>
+              </tr>
+              <tr>
+                  <td>9</td>
+                  <td>Dr. Đặng Thị Thu</td>
+                  <td>Da liễu</td>
+                  <td>0968901234</td>
+              </tr>
+              <tr>
+                  <td>10</td>
+                  <td>Dr. Hồ Văn Tài</td>
+                  <td>Hô hấp</td>
+                  <td>0979012345</td>
+              </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Bảng Hóa Đơn -->
+    <section id="hoadon">
+        <h2>Hóa Đơn</h2>
+        <input type="text" id="search-hoadon" onkeyup="searchTable('hoadon')" placeholder="Tìm kiếm Hóa Đơn">
+        <table id="hoadon-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Mã Hóa Đơn</th>
+                    <th>Ngày Lập</th>
+                    <th>Số Tiền</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>HD001</td>
+                    <td>2025-04-01</td>
+                    <td>500,000 VND</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>HD002</td>
+                    <td>2025-04-02</td>
+                    <td>300,000 VND</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>HD001</td>
+                  <td>2025-04-01</td>
+                  <td>1,200,000₫</td>
+              </tr>
+              <tr>
+                  <td>2</td>
+                  <td>HD002</td>
+                  <td>2025-04-02</td>
+                  <td>850,000₫</td>
+              </tr>
+              <tr>
+                  <td>3</td>
+                  <td>HD003</td>
+                  <td>2025-04-03</td>
+                  <td>2,500,000₫</td>
+              </tr>
+              <tr>
+                  <td>4</td>
+                  <td>HD004</td>
+                  <td>2025-04-04</td>
+                  <td>600,000₫</td>
+              </tr>
+              <tr>
+                  <td>5</td>
+                  <td>HD005</td>
+                  <td>2025-04-05</td>
+                  <td>1,750,000₫</td>
+              </tr>
+              <tr>
+                  <td>6</td>
+                  <td>HD006</td>
+                  <td>2025-04-06</td>
+                  <td>3,200,000₫</td>
+              </tr>
+              <tr>
+                  <td>7</td>
+                  <td>HD007</td>
+                  <td>2025-04-07</td>
+                  <td>950,000₫</td>
+              </tr>
+              <tr>
+                  <td>9</td>
+                  <td>HD008</td>
+                  <td>2025-04-08</td>
+                  <td>1,100,000₫</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>HD001</td>
+                <td>2025-04-01</td>
+                <td>1,200,000₫</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>HD002</td>
+                <td>2025-04-02</td>
+                <td>850,000₫</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Bảng Đơn Thuốc -->
+    <section id="donthuoc">
+        <h2>Đơn Thuốc</h2>
+        <input type="text" id="search-donthuoc" onkeyup="searchTable('donthuoc')" placeholder="Tìm kiếm Đơn Thuốc">
+        <table id="donthuoc-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Mã Đơn Thuốc</th>
+                    <th>Tên Thuốc</th>
+                    <th>Số Lượng</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>DT001</td>
+                    <td>Paracetamol</td>
+                    <td>30 viên</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>DT002</td>
+                    <td>Ibuprofen</td>
+                    <td>20 viên</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Bảng Dịch Vụ -->
+    <section id="dichvu">
+        <h2>Dịch Vụ</h2>
+        <input type="text" id="search-dichvu" onkeyup="searchTable('dichvu')" placeholder="Tìm kiếm Dịch Vụ">
+        <table id="dichvu-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên Dịch Vụ</th>
+                    <th>Mô Tả</th>
+                    <th>Giá</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Siêu Âm</td>
+                    <td>Chẩn đoán hình ảnh</td>
+                    <td>200,000 VND</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Chụp X-Quang</td>
+                    <td>Chẩn đoán hình ảnh</td>
+                    <td>150,000 VND</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Bảng Loại Thuốc -->
+    <section id="loathuoc">
+        <h2>Loại Thuốc</h2>
+        <input type="text" id="search-loathuoc" onkeyup="searchTable('loathuoc')" placeholder="Tìm kiếm Loại Thuốc">
+        <table id="loathuoc-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên Loại Thuốc</th>
+                    <th>Mô Tả</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Thuốc giảm đau</td>
+                    <td>Thuốc giảm đau, hạ sốt</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Thuốc kháng sinh</td>
+                    <td>Chữa bệnh nhiễm trùng</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Bảng Lịch Hẹn -->
+    <section id="lichhen">
+        <h2>Lịch Hẹn</h2>
+        <input type="text" id="search-lichhen" onkeyup="searchTable('lichhen')" placeholder="Tìm kiếm Lịch Hẹn">
+        <table id="lichhen-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên Bệnh Nhân</th>
+                    <th>Ngày Hẹn</th>
+                    <th>Bác Sĩ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>2025-04-10</td>
+                    <td>Dr. Nguyễn Minh</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Trần Thị B</td>
+                    <td>2025-04-11</td>
+                    <td>Dr. Trần Lan</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Bảng Hồ Sơ Bệnh Án -->
+    <section id="hosobenhan">
+        <h2>Hồ Sơ Bệnh Án</h2>
+        <input type="text" id="search-hosobenhan" onkeyup="searchTable('hosobenhan')" placeholder="Tìm kiếm Hồ Sơ Bệnh Án">
+        <table id="hosobenhan-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên Bệnh Nhân</th>
+                    <th>Chẩn Đoán</th>
+                    <th>Ngày Lập Hồ Sơ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>Viêm phổi</td>
+                    <td>2025-04-01</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Trần Thị B</td>
+                    <td>Cảm cúm</td>
+                    <td>2025-04-02</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

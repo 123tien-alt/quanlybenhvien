@@ -1,0 +1,154 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+  padding-left: 250px; /* Để tránh nội dung bị che bởi menu */
+}
+
+header {
+  
+  color:#4CAF50 ;
+  text-align: left;
+  padding: 5px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.menu-header {
+  text-align: center;
+  padding: 20px;
+  
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #575757;
+}
+
+/* Các bảng */
+section {
+  padding: 20px;
+  
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+/* Tạo kiểu cho ô tìm kiếm */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+/* Kiểu cho các bảng */
+section {
+  margin-top: 55px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th, td {
+  padding: 12px;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Đảm bảo các bảng không bị đẩy quá nhiều ra ngoài màn hình */
+section {
+  overflow-x: auto;
+}
+.content-section {
+  margin-top: 60px;  /* Điều chỉnh giá trị này sao cho phù hợp */
+}
+
+#benhnhan1{
+  margin-top: 40px !important;
+}
